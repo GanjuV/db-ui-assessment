@@ -1,8 +1,10 @@
-<form [formGroup]="formGroup" (ngSubmit)="getRomanData()">
-  <mat-form-field appearance="outline">
-    <mat-label>Enter number</mat-label>
-    <input matInput placeholder="Enter number" formControlName="searchVal" type="text">
-  </mat-form-field>
-  <button mat-raised-button color="accent">Convert</button>
-</form>  
+<div class="container">
+  <form [formGroup]="myForm" (ngSubmit)="getRomanData()">
+    <mat-form-field appearance="outline">
+      <mat-label>Enter number</mat-label>
+      <input matInput placeholder="Enter number" formControlName="searchVal" type="text">
+    </mat-form-field>
+    <button mat-raised-button color="accent">Convert</button>
+  </form>  
+</div>
 {{outPut}}
