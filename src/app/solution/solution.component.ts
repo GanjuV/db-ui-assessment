@@ -8,10 +8,15 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class SolutionComponent {
   outPut: string;
-  formGroup: FormGroup;
+  myForm: FormGroup;
 
+  /**
+   * Creates an instance of SolutionComponent.
+   * @param {FormBuilder} fb
+   * @memberof SolutionComponent
+   */
   constructor(private fb: FormBuilder) {
-    this.formGroup = this.fb.group({
+    this.myForm = this.fb.group({
       searchVal: ''
     });
   }
@@ -23,7 +28,7 @@ export class SolutionComponent {
    * Method to convert the provided number to roman number.
    */
   getRomanData() {
-    const { searchVal } = this.formGroup.value;
+    const { searchVal } = this.myForm.value;
     if (isNaN(searchVal)) {
       this.outPut = 'Enter number only';
       return null;
